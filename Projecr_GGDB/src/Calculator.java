@@ -13,7 +13,7 @@ public class Calculator {
 	private JLabel CreditLabel;
 	private JLabel rubLabel;
 	private JLabel name1;
-	
+	private JLabel email2;
 	private JTextField srokField;
 	private JLabel srokLabel;
 	private JLabel yearsLabel;
@@ -45,6 +45,7 @@ public class Calculator {
 		procentLabel = new JLabel("%");
 		calcButton = new JButton("Расчитать");
 		name1 = new JLabel("Галанов 1_galanov@bk.ru");
+		email2 = new JLabel("Галиуллин gal9.tima@bk.ru");
 
 
 		calcButton.addActionListener(new ActionListener() {
@@ -199,6 +200,10 @@ public class Calculator {
 		constraints.gridx = 1;
 		constraints.gridy = 7;
 		layout.setConstraints(name1, constraints);
+		constraints.gridx = 1;
+		constraints.gridy = 8;
+		layout.setConstraints(email2, constraints);
+
 
 		constraints.gridx = 0;
 		constraints.gridy = 4;
@@ -230,6 +235,7 @@ public class Calculator {
 		
 		
 		mainFrame.add(name1);
+		mainFrame.add(email2);
 		mainFrame.add(CreditLabel);
 		mainFrame.add(srokLabel);
 		mainFrame.add(stavkaLabel);
