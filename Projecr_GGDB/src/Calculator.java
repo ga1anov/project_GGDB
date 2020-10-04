@@ -237,7 +237,7 @@ public class Calculator {
 		layout.setConstraints(calcButton, constraints);
 		
 		constraints.gridx = 0;
-		constraints.gridy = 8;
+		constraints.gridy = 11;
 		constraints.gridwidth = GridBagConstraints.REMAINDER;
 		constraints.anchor = GridBagConstraints.EAST;
 		layout.setConstraints(inf, constraints);
