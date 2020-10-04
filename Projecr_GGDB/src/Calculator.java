@@ -21,10 +21,12 @@ public class Calculator {
 	private JLabel stavkaLabel;
 	private JLabel procentLabel;
 	private JButton calcButton;
+	private JButton inf;
 	private JLabel resultLabel;
 	private JFrame mainFrame;
 	private JRadioButton annuitCheck;
 	private JRadioButton diffCheck;
+	
 	boolean annu = false;
 	boolean diff = false;
 
@@ -44,6 +46,7 @@ public class Calculator {
 		stavkaField.setHorizontalAlignment(JTextField.RIGHT);
 		procentLabel = new JLabel("%");
 		calcButton = new JButton("Расчитать");
+		inf = new JButton("Информация");
 		name1 = new JLabel("Галанов 1_galanov@bk.ru");
 
 
@@ -122,6 +125,14 @@ public class Calculator {
 		launchBrowser("cbr.ru");
 		}
 		});
+		
+		inf.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			JOptionPane.showMessageDialog(null,"https://github.com/ga1anov/project_GGDB","Info", JOptionPane.INFORMATION_MESSAGE);
+			}
+			});
+		
+		
 		
 		JButton convert = new JButton("Конвертер");
 		convert.setBounds(200, 310, 120, 50);
@@ -205,6 +216,12 @@ public class Calculator {
 		constraints.gridwidth = GridBagConstraints.REMAINDER;
 		constraints.anchor = GridBagConstraints.EAST;
 		layout.setConstraints(calcButton, constraints);
+		
+		constraints.gridx = 0;
+		constraints.gridy = 8;
+		constraints.gridwidth = GridBagConstraints.REMAINDER;
+		constraints.anchor = GridBagConstraints.EAST;
+		layout.setConstraints(inf, constraints);
 
 		constraints.gridy = 5;
 		constraints.fill = GridBagConstraints.HORIZONTAL;
@@ -240,6 +257,7 @@ public class Calculator {
 		mainFrame.add(yearsLabel);
 		mainFrame.add(procentLabel);
 		mainFrame.add(calcButton);
+		mainFrame.add(inf);
 		mainFrame.add(resultLabel);
 		mainFrame.add(diffCheck);
 		mainFrame.add(annuitCheck);
