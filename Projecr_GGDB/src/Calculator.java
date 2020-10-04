@@ -14,6 +14,8 @@ public class Calculator {
 	private JLabel rubLabel;
 	private JLabel name1;
 	
+	private JLabel email3;
+	
 	private JTextField srokField;
 	private JLabel srokLabel;
 	private JLabel yearsLabel;
@@ -46,6 +48,7 @@ public class Calculator {
 		calcButton = new JButton("Расчитать");
 		name1 = new JLabel("Галанов 1_galanov@bk.ru");
 
+		email3 = new JLabel("Байбурина oli6574@mail.ru");
 
 		calcButton.addActionListener(new ActionListener() {
 			@Override
@@ -200,6 +203,12 @@ public class Calculator {
 		constraints.gridy = 7;
 		layout.setConstraints(name1, constraints);
 
+		
+		
+		constraints.gridx = 1;
+		constraints.gridy = 9;
+		layout.setConstraints(email3, constraints);
+		
 		constraints.gridx = 0;
 		constraints.gridy = 4;
 		constraints.gridwidth = GridBagConstraints.REMAINDER;
@@ -228,7 +237,7 @@ public class Calculator {
 
 		
 		
-		
+		mainFrame.add(email3);
 		mainFrame.add(name1);
 		mainFrame.add(CreditLabel);
 		mainFrame.add(srokLabel);
